@@ -1,0 +1,335 @@
+/* =========> CSS Settings <========= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* ====== Header ======= */
+
+header {
+    text-align: center;
+}
+
+header .title {
+    box-shadow: 0px 1px 6px 1px grey;
+    position: relative;
+}
+
+.title h1 {
+    font-family: 'Shrikhand', cursive;
+    font-weight: 400;
+    font-size: 27px;
+    padding: 14px;
+}
+
+header .location {
+    background-color: #e4e2e2;
+    padding: 14px;
+}
+
+.location span {
+    padding-left: 15px;
+}
+
+/* Reservation bloc */
+
+.reservation {
+    padding: 45px 60px;
+    background: #f2f1f1;
+}
+
+.reservation h2 {
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.reservation p {
+    margin-top: 20px;
+    font-size: 26px;
+    font-weight: 300;
+}
+
+/* Reservation button */
+
+.btn {
+    margin-top: 51px;
+    margin-bottom: 23px;
+    transition: 0.6s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn a {
+    padding: 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    background: linear-gradient(#ff79da 0%, #ba62db 100%);
+    color: white;
+    box-shadow: 1px 11px 14px 0px rgb(130 130 130 / 38%);
+    
+}
+
+.btn a:hover {
+    background: linear-gradient(#ff99e2 0%, #dc7bff 100%);
+}
+
+
+/* ====== Main ======= */
+
+/* == Section == */
+/* Functioning container */
+
+.functioning-container {
+    padding: 45px 60px;
+}
+
+.functioning-container h3 {
+    font-size: 24px;
+}
+
+.list-cards {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    padding: 32px;
+    justify-content: space-around;
+}
+
+/* Card */
+
+.card {
+    display: flex;
+    align-items: center;
+    background-color: #f2f1f1;
+    padding: 25px 35px;
+    border-radius: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 281px;
+    box-shadow: 0px 7px 14px -5px rgb(0 0 0 / 30%);
+}
+
+.card:hover {
+    background-color: #e4e4e4;
+}
+
+.card .number {
+    position: absolute;
+    transform: translate(-49px);
+    background-color: #ba62db;
+    padding: 5px;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.card i {
+    padding-right: 20px;
+    color: #7e7e7e;
+}
+
+.card:hover i {
+    color: #ba62db;
+}
+
+
+/* == Section == */
+/* Restauarant container */
+
+.restaurant-container {
+    padding: 45px 60px;
+    background-color: #f2f1f1;
+}
+
+.restaurant-container h3 {
+    font-size: 24px;
+}
+
+/* Foods article */
+
+.foods-article {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    row-gap: 35px;
+}
+
+/* Food bloc */
+
+.food-bloc {
+    background-color: white;
+    width: 315px;
+    border-radius: 20px;
+    box-shadow: -2px 5px 16px -4px rgb(0 0 0 / 30%);
+    position: relative;
+}
+
+.food-bloc.new::after {
+    content: "Nouveau";
+    background-color: #99E2D0;
+    color: #008766;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    padding: 5px 10px;
+    font-weight: 700;
+    border-radius: 2px;
+}
+
+.food-bloc a {
+    text-decoration: none;
+    color: black;
+}
+
+.food-bloc img {
+    width: 100%;
+    height: 170px;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+}
+
+/* Food content */
+
+.food-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px 10px 15px;
+}
+
+.food-content_text h4 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.food-content_text p {
+    padding-top: 5px;
+}
+
+.food-content_heart i {
+    font-size: 22px;
+}
+
+.food-content_heart i:hover {
+    background: linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
+    color: transparent;
+    font-weight: 700;
+    -webkit-background-clip: text;
+    cursor: pointer;
+}
+
+
+/* ====== Footer ======= */
+
+footer {
+    padding: 20px;
+    background-color: #353535;
+    text-align: center;
+}
+
+footer h4 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px;
+    color: white;
+    font-weight: 300;
+    padding: 10px 0;
+}
+
+.link-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link-footer a {
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    width: fit-content;
+}
+
+.link-footer i{
+    color: white;
+}
+
+.link-footer span {
+    padding-left: 5px;
+}
+
+
+
+/* =========> Media Query <========= */
+
+
+/* ==== Vue mobile (500px) ==== */
+
+@media screen and (max-width: 500px) {
+
+    /* ====== Header ======= */
+
+    /* Reservation bloc */
+
+    .reservation {
+        padding: 45px 40px;
+    }
+
+    .reservation h2 {
+        font-size: 27px;
+    }
+
+    .reservation p {
+        font-size: 20px;
+    }
+
+    /* Reservation button */
+
+    .btn a {
+        font-size: 13px;
+    }
+
+
+    /* ====== Main ======= */
+
+    /* == Section == */
+    /* Functioning container */
+
+    .functioning-container {
+        padding: 55px 20px;
+    }
+
+    .list-cards {
+        padding: 32px 0;
+    }
+
+    /* == Section == */
+    /* Restauarant container */
+
+    .restaurant-container {
+        padding: 55px 20px;
+    }
+
+
+    /* ====== Footer ======= */
+
+    footer {
+        text-align: start;
+    }
+
+    .link-footer {
+        align-items: start;
+    }
+}
