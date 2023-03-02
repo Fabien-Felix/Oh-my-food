@@ -102,27 +102,88 @@ header a {
     margin-top: 4px;
 }
 
+/* Menu card */
+
 .menu-card {
     background-color: white;
     margin: 22px 0;
-    padding: 14px 25px 14px 12px;
+    padding: 10px 25px 10px 12px;
     border-radius: 20px;
     box-shadow: 0px 7px 14px -5px rgb(0 0 0 / 30%);
+    position: relative;
+    /* overflow: hidden; */
+    width: 100%;
+    z-index: 0;
+    cursor: pointer;
+    /* animation-fill-mode: both; */
+    /* text-indent: 0px; */
+}
+
+.menu-card_content {
+    width: 100%;
 }
 
 .menu-card_title h4 {
     font-size: 20px;
     font-weight: 700;
+    padding: 6px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .menu-card_text {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .menu-card_text p {
     font-size: 16px;
     font-weight: 400;
-    padding-top: 10px;
+    padding: 6px 0;
+    position: relative;
+}
+
+.menu-card_text p:nth-child(1) {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu-card_valid {
+    background-color: #99E2D0;
+    width: 88px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    right: -89px;
+    transition: 0.8s ease-in-out;
+}
+
+.menu-card_text strong {            /* a revoir */
+    transition: 0.8s ease-in-out;
+}
+
+.menu-card:hover .menu-card_text strong {
+    right: 89px;
+    position: absolute;
+}
+
+.menu-card:hover .menu-card_valid {
+    right: 0px;
+}
+
+.menu-card_valid i {
+    color: white;
+    font-size: 20px;
+    transition: 1s ease-in-out;
+}
+
+.menu-card:hover .menu-card_valid i {
+    transform: rotate(360deg);
 }
