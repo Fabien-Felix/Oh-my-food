@@ -111,12 +111,11 @@ header a {
     border-radius: 20px;
     box-shadow: 0px 7px 14px -5px rgb(0 0 0 / 30%);
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
     width: 100%;
     z-index: 0;
     cursor: pointer;
     /* animation-fill-mode: both; */
-    /* text-indent: 0px; */
 }
 
 .menu-card_content {
@@ -132,9 +131,14 @@ header a {
     text-overflow: ellipsis;
 }
 
+.menu-card:hover .menu-card_title h4 {
+    width: calc(100% - 110px);
+}
+
 .menu-card_text {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .menu-card_text p {
@@ -142,13 +146,21 @@ header a {
     font-weight: 400;
     padding: 6px 0;
     position: relative;
-}
-
-.menu-card_text p:nth-child(1) {
-    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.menu-card:hover .menu-card_text p {
+    width: calc(100% - 120px);
+}
+
+.menu-card_text strong {             
+    transition: 0.7s ease-in-out;
+}
+
+.menu-card:hover .menu-card_text strong {
+    padding-right: 80px;
 }
 
 .menu-card_valid {
@@ -162,16 +174,7 @@ header a {
     text-align: center;
     top: 0;
     right: -89px;
-    transition: 0.8s ease-in-out;
-}
-
-.menu-card_text strong {             /* a revoir */
-    transition: 0.8s ease-in-out;
-}
-
-.menu-card:hover .menu-card_text strong {
-    right: 89px;
-    position: absolute;
+    transition: 0.7s ease-in-out;
 }
 
 .menu-card:hover .menu-card_valid {
@@ -186,4 +189,27 @@ header a {
 
 .menu-card:hover .menu-card_valid i {
     transform: rotate(360deg);
+}
+
+/* Button */
+
+.btn {
+    display: flex;
+    justify-content: center;
+    margin: 35px 0;
+}
+
+.btn a {
+    padding: 20px 70px;
+    text-decoration: none;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    background: linear-gradient(#ff79da 0%, #ba62db 100%);
+    color: white;
+    box-shadow: 1px 11px 14px 0px rgb(130 130 130 / 38%);   
+}
+
+.btn a:hover {
+    background: linear-gradient(#ff99e2 0%, #dc7bff 100%);
 }
