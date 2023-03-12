@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,6 +19,8 @@
 
 </head>
 <body>
+    <div class="loader"></div>
+
     <header>
         <a href="index.html">
             <i class="fa-solid fa-arrow-left"></i>
@@ -39,9 +41,9 @@
                     <i class="fa-regular fa-heart"></i>
                 </div>
 
-                <div class="menu-entree">
+                <div class="menu">
                     <h3>ENTRÉES</h3>
-                    <div class="menu-card">
+                    <div class="menu-card first-card">
                         <div class="menu-card_content">
                             <div class="menu-card_title">
                                 <h4>Fricassée d'escargots</h4>
@@ -56,7 +58,7 @@
                         </div>
                     </div>
 
-                    <div class="menu-card">
+                    <div class="menu-card second-card">
                         <div class="menu-card_content">
                             <div class="menu-card_title">
                                 <h4>Foie gras de canard mi-cuit</h4>
@@ -71,7 +73,7 @@
                         </div>
                     </div>
 
-                    <div class="menu-card">
+                    <div class="menu-card third-card">
                         <div class="menu-card_content">
                             <div class="menu-card_title">
                                 <h4>Oeuf au plat</h4>
@@ -87,9 +89,9 @@
                     </div>
                 </div>
 
-                <div class="menu-entree">
+                <div class="menu">
                     <h3>PLATS</h3>
-                    <div class="menu-card">
+                    <div class="menu-card first-card">
                         <div class="menu-card_content">
                             <div class="menu-card_title">
                                 <h4>Filet de boeuf aux herbes</h4>
@@ -104,7 +106,7 @@
                         </div>
                     </div>
 
-                    <div class="menu-card">
+                    <div class="menu-card second-card">
                         <div class="menu-card_content">
                             <div class="menu-card_title">
                                 <h4>Parmentier de queue de boeuf</h4>
@@ -119,7 +121,7 @@
                         </div>
                     </div>
 
-                    <div class="menu-card">
+                    <div class="menu-card third-card">
                         <div class="menu-card_content">
                             <div class="menu-card_title">
                                 <h4>Filet de turbot</h4>
@@ -135,9 +137,9 @@
                     </div>
                 </div>
 
-                <div class="menu-entree">
+                <div class="menu">
                     <h3>DESSERTS</h3>
-                    <div class="menu-card">
+                    <div class="menu-card first-card">
                         <div class="menu-card_content">
                             <div class="menu-card_title">
                                 <h4>Paris-Brest</h4>
@@ -152,7 +154,7 @@
                         </div>
                     </div>
 
-                    <div class="menu-card">
+                    <div class="menu-card second-card">
                         <div class="menu-card_content">
                             <div class="menu-card_title">
                                 <h4>Macaron au chocolat d'exception</h4>
@@ -167,7 +169,7 @@
                         </div>
                     </div>
 
-                    <div class="menu-card">
+                    <div class="menu-card third-card">
                         <div class="menu-card_content">
                             <div class="menu-card_title">
                                 <h4>Mousse au chocolat</h4>
@@ -187,11 +189,29 @@
                     <a href="#restaurant">Commander</a>
                 </div>
             </div>
-
-            
-
         </section>
     </main>
     
+    <footer>
+        <h4>ohmyfood</h4>
+        <div class="link-footer">
+            <a href="#">
+                <i class="fa-solid fa-utensils"></i>
+                <span>Proposer un restaurant</span>
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-handshake-angle"></i>
+                <span>Devenir partenaire</span>
+            </a>
+            <a href="#">Mention légales</a>
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener("load", () => {
+           document.querySelector(".loader").classList.add("loader-hidden"); 
+        });
+    </script>
 </body>
 </html>
