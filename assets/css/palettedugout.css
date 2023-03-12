@@ -167,25 +167,25 @@ header a {
 /* Keyframes */
 
 @keyframes appear {
-    from {
-        transform: scale(50%);
+    0% {
+        transform: scaleY(0);
     }
 
-    to {
-        transform: scale(100%);
+    100% {
+        transform: scaleY(1);
     }
 }
 
 .first-card {
-    animation: appear 1s;
+    animation: appear 1.10s;
 }
 
 .second-card {
-    animation: appear 1.5s;
+    animation: appear 1.20s;
 }
 
 .third-card {
-    animation: appear 2s;
+    animation: appear 1.30s;
 }
 
 /* Menu card content */
