@@ -1,0 +1,355 @@
+/* =========> CSS Settings <========= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* ==== Loader page ==== */
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    background: #ffff;
+    transition: opacity 0.75s, visibilty 0.75s;
+}
+
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid rgb(194, 194, 194);
+    border-top-color: rgb(206, 26, 206);
+    border-radius: 50%;
+    position: absolute;
+    animation: loading 0.75s ease infinite;
+}
+
+/* Animation load keyframes */
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+
+/* ====== Header ======= */
+
+header {
+    text-align: center;
+}
+
+/* Arrow */
+
+header a {
+    position: absolute;
+    left: 22px;
+    top: 22px;
+    font-size: 20px;
+    color: black;
+}
+
+.title h1 {
+    font-family: 'Shrikhand', cursive;
+    font-weight: 400;
+    font-size: 27px;
+    padding: 14px;
+}
+
+
+/* ====== Main ======= */
+
+/* ==== Main menu ==== */
+
+.main-menu {
+    margin-bottom: -60px;
+}
+
+.main-menu img {
+    width: 100%;
+    height: 16em;
+    object-fit: cover;
+}
+
+/* == Menu container == */
+
+.menu-container {
+    background-color: #f2f1f1;
+    border-radius: 40px 40px 0 0;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px;
+    transform: translate(0px, -60px);
+}
+
+.menu-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.menu-title h2 {
+    font-family: 'Shrikhand', cursive;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.fa-heart {
+    font-size: 25px;
+    padding-right: 10px;
+}
+
+.fa-heart:hover {
+    background: linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
+    color: transparent;
+    font-weight: 700;
+    -webkit-background-clip: text;
+    cursor: pointer;
+}
+
+/* Menu entree */
+
+.menu {
+    padding: 10px 0;
+}
+
+.menu h3 {
+    font-weight: 400;
+}
+
+.menu h3::after {
+    content: "";
+    width: 50px;
+    height: 3.5px;
+    display: block;
+    position: absolute;
+    background-color: #99E2D0;
+    margin-top: 4px;
+}
+
+/* Menu card */
+
+.menu-card {
+    background-color: white;
+    margin: 22px 0;
+    padding: 10px 25px 10px 12px;
+    border-radius: 20px;
+    box-shadow: 0px 7px 14px -5px rgb(0 0 0 / 30%);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    z-index: 0;
+    cursor: pointer;
+}
+
+/* Menu card animation */
+/* Keyframes */
+
+@keyframes appear {
+    0% {
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+.first-card {
+    animation: appear 1.10s;
+}
+
+.second-card {
+    animation: appear 1.20s;
+}
+
+.third-card {
+    animation: appear 1.30s;
+}
+
+/* Menu card content */
+
+.menu-card_content {
+    width: 100%;
+}
+
+.menu-card_title h4 {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 6px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu-card:hover .menu-card_title h4 {
+    width: calc(100% - 110px);
+}
+
+.menu-card_text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-card_text p {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 6px 0;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu-card:hover .menu-card_text p {
+    width: calc(100% - 120px);
+}
+
+.menu-card_text strong {             
+    transition: 0.7s ease-in-out;
+}
+
+.menu-card:hover .menu-card_text strong {
+    padding-right: 80px;
+}
+
+.menu-card_valid {
+    background-color: #99E2D0;
+    width: 88px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    right: -89px;
+    transition: 0.7s ease-in-out;
+}
+
+.menu-card:hover .menu-card_valid {
+    right: 0px;
+}
+
+.menu-card_valid i {
+    color: white;
+    font-size: 20px;
+    transition: 1s ease-in-out;
+}
+
+.menu-card:hover .menu-card_valid i {
+    transform: rotate(360deg);
+}
+
+/* Button */
+
+.btn {
+    display: flex;
+    justify-content: center;
+    margin: 35px 0;
+}
+
+.btn a {
+    padding: 20px 70px;
+    text-decoration: none;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    background: linear-gradient(#ff79da 0%, #ba62db 100%);
+    color: white;
+    box-shadow: 1px 11px 14px 0px rgb(130 130 130 / 38%);   
+}
+
+.btn a:hover {
+    background: linear-gradient(#ff99e2 0%, #dc7bff 100%);
+}
+
+
+/* ====== Footer ======= */
+
+footer {
+    padding: 20px;
+    background-color: #353535;
+    text-align: center;
+}
+
+footer h4 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px;
+    color: white;
+    font-weight: 300;
+    padding: 10px 0;
+}
+
+.link-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link-footer a {
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    width: fit-content;
+}
+
+.link-footer i{
+    color: white;
+}
+
+.link-footer span {
+    padding-left: 5px;
+}
+
+
+
+/* =========> Media Query <========= */
+
+
+/* ==== Vue mobile (500px) ==== */
+
+@media screen and (max-width: 500px) {
+
+    /* ====== Main ======= */
+
+    /* Button */
+
+    .btn a {
+        padding: 20px 60px;
+        font-size: 14px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        text-align: start;
+    }
+
+    .link-footer {
+        align-items: start;
+    }
+}
