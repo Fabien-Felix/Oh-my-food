@@ -188,6 +188,10 @@ header a {
     animation: appear 1.30s;
 }
 
+.fourth-card {
+    animation: appear 1.40s;
+}
+
 /* Menu card content */
 
 .menu-card_content {
